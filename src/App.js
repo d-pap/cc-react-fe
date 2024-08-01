@@ -6,9 +6,9 @@
 
 import React from 'react'
 import './App.css'
-// import Navbar from "./components/Navbar"
-import Header from './components/Header-Footer/Header'
-import Footer from './components/Header-Footer/Footer'
+
+import Header from './components/header-footer/Header'
+import Footer from './components/header-footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages'
 import About from './pages/nav/about'
@@ -20,7 +20,7 @@ import AddProblems from './pages/nav/addProblems'
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
