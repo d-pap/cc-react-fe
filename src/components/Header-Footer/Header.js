@@ -1,11 +1,10 @@
 import React from "react";
-import { NavLink as RouterLink } from "react-router-dom";
-import Navbar from "./NavBar";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { NavLink as RouterLink } from "react-router-dom";
 import Logo from './icons/CodeCoachLogo.png'; // Import the logo
+import NavBar from './NavBar';
 
-// Styled header section using MUI
 const HeaderSection = styled(AppBar)(({ theme }) => ({
   background: "#468585",
   display: "flex",
@@ -14,7 +13,6 @@ const HeaderSection = styled(AppBar)(({ theme }) => ({
 
 const TitleWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
-  justifyContent: "flex-start",
   alignItems: "center",
   textDecoration: "none",
 }));
@@ -26,7 +24,7 @@ const ProjectTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2rem",
   color: "#def9c4",
   marginLeft: theme.spacing(2), // Add some space between the logo and title
-  textDecoration: "none", 
+  textDecoration: "none",
 }));
 
 const LogoImage = styled('img')(({ theme }) => ({
@@ -39,12 +37,12 @@ const Header = () => {
   return (
     <HeaderSection position="static">
       <Toolbar sx={{ justifyContent: "space-between", width: "100%" }}>
-      <TitleWrapper component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
+        <TitleWrapper component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
           <LogoImage src={Logo} alt="CodeCoach Logo" />
           <ProjectTitle variant="h1">Code Coach</ProjectTitle>
         </TitleWrapper>
-        <Box sx={{ marginLeft: "auto" }}>
-          <Navbar />
+        <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1, justifyContent: "center" }}>
+          <NavBar />
         </Box>
       </Toolbar>
     </HeaderSection>
