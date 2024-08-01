@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { NavLink as RouterLink } from "react-router-dom";
-import Logo from './icons/CodeCoachLogo.png'; // Import the logo
+// import Logo from './icons/CodeCoachLogo.png'; // Import the logo
 import NavBar from './NavBar';
 
 const HeaderSection = styled(AppBar)(({ theme }) => ({
@@ -27,18 +27,18 @@ const ProjectTitle = styled(Typography)(({ theme }) => ({
   textDecoration: "none",
 }));
 
-const LogoImage = styled('img')(({ theme }) => ({
-  height: 100, // Adjust the height as needed
-  marginRight: theme.spacing(2),
-  marginTop: theme.spacing(1)
-}));
+// const LogoImage = styled('img')(({ theme }) => ({
+//   height: 100, // Adjust the height as needed
+//   marginRight: theme.spacing(2),
+//   marginTop: theme.spacing(1)
+// }));
 
 const Header = () => {
   return (
     <HeaderSection position="static">
       <Toolbar sx={{ justifyContent: "space-between", width: "100%" }}>
         <TitleWrapper component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
-          <LogoImage src={Logo} alt="CodeCoach Logo" />
+          {/* <LogoImage src={Logo} alt="CodeCoach Logo" /> */}
           <ProjectTitle variant="h1">Code Coach</ProjectTitle>
         </TitleWrapper>
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1, justifyContent: "center" }}>
